@@ -1,8 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
-:root {
-  --primaryColor: #4f46e5;
-  --primaryHover: #6366f1;
-}
+
 
 * {
   margin: 0;
