@@ -10,12 +10,10 @@ country.forEach((countryData) => {
 
 const loginnumber = document.getElementById("login_number");
 const numberPass = document.getElementById("number_password");
-// let optionValue = document.getElementById("optionValue");
 
 const numberRegister = (e) => {
   e.preventDefault();
   let selectedOption = select.options[select.selectedIndex];
-  console.log("optionValue ==> ", selectedOption.value);
 };
 
 const numLogin = document
