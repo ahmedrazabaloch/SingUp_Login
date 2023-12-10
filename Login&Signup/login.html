@@ -21,13 +21,23 @@
       <div class="form login">
         <div class="form-content">
           <header>Login</header>
-          <form action="#">
+          <form>
             <div class="field input-field">
-              <input type="email" placeholder="Email" class="input" />
+              <input
+                type="email"
+                placeholder="Email"
+                class="input"
+                id="login_email"
+              />
             </div>
 
             <div class="field input-field">
-              <input type="password" placeholder="Password" class="password" />
+              <input
+                type="password"
+                placeholder="Password"
+                class="password"
+                id="login_password"
+              />
               <i class="bx bx-hide eye-icon"></i>
             </div>
 
@@ -36,7 +46,7 @@
             </div>
 
             <div class="field button-field">
-              <button>Login</button>
+              <button id="login_btn">Login</button>
             </div>
           </form>
 
@@ -66,5 +76,7 @@
       </div>
     </section>
 
+    <script src="/firebase.js" type="module"></script>
+    <script src="login.js" type="module"></script>
   </body>
 </html>

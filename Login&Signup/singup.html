@@ -23,9 +23,14 @@
       <div class="form signup">
         <div class="form-content">
           <header>Signup</header>
-          <form action="#">
+          <form>
             <div class="field input-field">
-              <input type="email" placeholder="Email" class="input" />
+              <input
+                type="email"
+                placeholder="Email"
+                class="input"
+                id="singup_email"
+              />
             </div>
 
             <div class="field input-field">
@@ -33,6 +38,7 @@
                 type="password"
                 placeholder="Create password"
                 class="password"
+                id="singup_password"
               />
             </div>
 
@@ -41,12 +47,14 @@
                 type="password"
                 placeholder="Confirm password"
                 class="password"
+                id="singup_conf_pass"
               />
               <i class="bx bx-hide eye-icon"></i>
+              <span class="error_Pass"></span>
             </div>
 
             <div class="field button-field">
-              <button>Signup</button>
+              <button id="singup_btn">Signup</button>
             </div>
           </form>
 
@@ -76,5 +84,7 @@
       </div>
     </section>
 
+    <script src="singup.js" type="module"></script>
+    <script src="/firebase.js" type="module"></script>
   </body>
 </html>
