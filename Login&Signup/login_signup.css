@@ -48,7 +48,8 @@ form {
   font-weight: 400;
   border-radius: 6px;
 }
-.field input {
+.field input,
+#inputNumber > select {
   outline: none;
   padding: 0 15px;
   border: 1px solid#CACACA;
@@ -151,6 +152,13 @@ a.icons span,
   left: 0px;
   font-weight: 600;
   text-transform: capitalize;
+}
+#inputNumber {
+  display: flex;
+  text-align: center;
+}
+#inputNumber > select {
+  border-radius: 6px;
 }
 
 @media screen and (max-width: 400px) {
