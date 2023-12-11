@@ -48,8 +48,7 @@ form {
   font-weight: 400;
   border-radius: 6px;
 }
-.field input,
-#inputNumber > select {
+.field input {
   outline: none;
   padding: 0 15px;
   border: 1px solid#CACACA;
@@ -153,14 +152,19 @@ a.icons span,
   font-weight: 600;
   text-transform: capitalize;
 }
-#inputNumber {
-  display: flex;
-  text-align: center;
+.iti {
+  width: 100%;
+  height: 100%;
 }
-#inputNumber > select {
-  border-radius: 6px;
+div#recaptcha-container {
+  margin-top: 20px;
 }
-
+div#recaptcha-container div {
+  margin: 0 auto;
+}
+.number_input {
+  /* display: none; */
+}
 @media screen and (max-width: 400px) {
   .form {
     padding: 20px 10px;

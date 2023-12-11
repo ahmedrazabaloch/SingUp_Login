@@ -7,6 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login With Number</title>
 
+    <!-- Country Code -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/intl-tel-input@18.2.1/build/css/intlTelInput.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@18.2.1/build/js/intlTelInput.min.js"></script>
+
     <!-- CSS -->
     <link rel="stylesheet" href="login_signup.css" />
 
@@ -20,67 +27,42 @@
     <section class="container forms">
       <div class="form login">
         <div class="form-content">
-          <header>Login With Number</header>
+          <header>Signup with Number</header>
           <form>
-            <div class="field input-field" id="inputNumber">
-              <select id="select">
-                <option value="">Code</option>
-              </select>
-              <input
-                type="number"
-                placeholder="313 90 90 700"
-                class="input"
-                id="login_number"
-              />
-            </div>
-
             <div class="field input-field">
-              <input
-                type="password"
-                placeholder="OTP Code"
-                class="password"
-                id="number_password"
-              />
-              <!-- <i class="bx bx-hide eye-icon"></i> -->
+              <input id="phone" type="tel" />
             </div>
-
-            <!-- <div class="form-link">
-              <a href="#" class="forgot-pass">Forgot password?</a>
-            </div> -->
 
             <div class="field button-field">
               <button id="num_login">Register</button>
+            </div>
+            <div id="recaptcha-container"></div>
+
+            <div class="field input-field">
+              <input
+                type="number"
+                placeholder="OTP Code"
+                class="password number_input"
+                id="otp_input"
+              />
+            </div>
+
+            <div class="field button-field">
+              <button id="confirm_otp" class="number_input">Confirm OTP</button>
             </div>
           </form>
 
           <div class="form-link">
             <span
-              >Already have an account?
+              >Already have an account ?
               <a href="login.html" class="link login-link">Login</a></span
             >
           </div>
         </div>
-
-        <!-- <div class="line"></div> -->
-
-        <!-- <div class="media-options">
-          <a href="#" class="field number">
-            <i class="bx bxs-mobile number-icon"></i>
-            <span>Login with Number</span>
-          </a>
-        </div>
-
-        <div class="media-options">
-          <a href="#" class="field icons">
-            <img src="./google.png" alt="" class="icons-img" />
-            <span>Login with Google</span>
-          </a>
-        </div> -->
       </div>
     </section>
 
-    <script src="/firebase.js" type="module"></script>
-    <script src="countryCode.js" type="module"></script>
+    <script src="../firebase.js" type="module"></script>
     <script src="loginWithNum.js" type="module"></script>
   </body>
 </html>
