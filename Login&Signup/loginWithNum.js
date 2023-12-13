@@ -15,7 +15,6 @@ window.recaptchaVerifier = new RecaptchaVerifier(
   {}
 );
 
-let otpInput = document.getElementById("otp_input"); // otp input
 let confirmation; // otp register in this varibale
 // refister number
 const numberRegister = (e) => {
@@ -37,12 +36,15 @@ const numLogin = document
   .getElementById("num_login")
   .addEventListener("click", numberRegister);
 //Verify OTP
-const verifyOtp = () => {
+let otpInput = document.getElementById("otp_input"); // otp input
+const verifyOtp = (e) => {
+  e.preventDefault();
+  console.log(otpInput.value);
   confirmation
     .confirm(otpInput.value)
     .then((result) => {
       const user = result.user;
-      console.log(user);
+      console.log("user", user);
     })
     .catch((error) => {
       console.log(error);
