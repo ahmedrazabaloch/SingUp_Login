@@ -38,6 +38,7 @@ form {
   width: 100%;
   margin-top: 20px;
   border-radius: 6px;
+  transition: all 0.3s linear;
 }
 .field input,
 .field button {
@@ -85,6 +86,9 @@ form {
   font-weight: 400;
   color: #232836;
 }
+.text-right {
+  text-align: right;
+}
 .form a {
   color: #0171d3;
   text-decoration: none;
@@ -114,7 +118,10 @@ form {
   align-items: center;
   justify-content: center;
 }
-
+.number:hover,
+.icons:hover {
+  border: 1px solid #016dcb;
+}
 a.number .number-icon {
   color: #000;
   font-size: 24px;
