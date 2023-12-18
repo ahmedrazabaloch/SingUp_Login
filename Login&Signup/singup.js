@@ -50,3 +50,21 @@ const register = (e) => {
 const singupBtn = document
   .getElementById("singup_btn")
   .addEventListener("click", register);
+
+// Show & Hide Password
+const showPass = () => {
+  if (singupConfPass.type == "password") {
+    singupConfPass.type = "text";
+    singupPassword.type = "text";
+    passShowHide.classList.remove("bx-hide");
+    passShowHide.classList.add("bx-show");
+  } else {
+    singupConfPass.type = "password";
+    singupPassword.type = "password";
+    passShowHide.classList.remove("bx-show");
+    passShowHide.classList.add("bx-hide");
+  }
+};
+
+const passShowHide = document.querySelector(".bx");
+passShowHide.addEventListener("click", showPass);

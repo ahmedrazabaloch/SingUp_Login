@@ -1,3 +1,45 @@
+import { onAuthStateChanged, auth, signOut } from "/firebase.js";
+
+let userName = document.getElementById("user_name");
+let userEmail = document.getElementById("user_email");
+let logout = document.getElementById("logout_btn");
+
+//User Confirmation if they login
+onAuthStateChanged(auth, (user) => {
+  if (user) {
+    if (location.pathname !== "/profile.html") {
+      location = "/profile.html";
+    }
+    if (userEmail) {
+      userEmail.innerHTML = user.email;
+    }
+    if (userName) {
+      userName.innerHTML = user.email.slice(0, user.email.indexOf("@"));
+    }
+  } else {
+    if (
+      location.pathname !== "/Login&Signup/login.html" &&
+      location.pathname !== "/Login&Signup/signup.html"
+    ) {
+      location = "/Login&Signup/login.html";
+    }
+  }
+});
+
+//User SignOut
+const userLogout = () => {
+  signOut(auth)
+    .then(() => {
+      console.log("User signOut -->");
+      location = "/Login&Signup/login.html";
+    })
+    .catch((error) => {
+      console.log("error-->", error);
+    });
+};
+
+logout && logout.addEventListener("click", userLogout);
+
 const showProfile = () => {
   let showHide = document.getElementById("showHide");
   if (showHide.style.display === "none") {
@@ -8,7 +50,7 @@ const showProfile = () => {
 };
 
 const dropdownProfile = document.getElementById("dropdown");
-dropdownProfile.addEventListener("click", showProfile);
+dropdownProfile && dropdownProfile.addEventListener("click", showProfile);
 
 const navProfile = () => {
   let mobileNav = document.getElementById("mobile-menu");
@@ -20,4 +62,4 @@ const navProfile = () => {
 };
 
 const navShowHide = document.getElementById("navShowHide");
-navShowHide.addEventListener("click", navProfile);
+navShowHide && navShowHide.addEventListener("click", navProfile);
