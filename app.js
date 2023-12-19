@@ -7,22 +7,21 @@ let logout = document.getElementById("logout_btn");
 //User Confirmation if they login
 onAuthStateChanged(auth, (user) => {
   if (user) {
-    if (location.pathname !== "/profile.html") {
-      location = "/profile.html";
-    }
-    if (userEmail) {
-      userEmail.innerHTML = user.email;
-    }
-    if (userName) {
-      userName.innerHTML = user.email.slice(0, user.email.indexOf("@"));
-    }
+    location.pathname !== "/profile.html"
+      ? (location = "/profile.html")
+      : console.log("Welcome");
+
+    userEmail ? (userEmail.innerHTML = user.email) : userEmail;
+
+    userName
+      ? (userName.innerHTML = user.email.slice(0, user.email.indexOf("@")))
+      : userName;
   } else {
-    if (
-      location.pathname !== "/Login&Signup/login.html" &&
-      location.pathname !== "/Login&Signup/signup.html"
-    ) {
-      location = "/Login&Signup/login.html";
-    }
+    location.pathname !== "/Login&Signup/login.html" &&
+    location.pathname !== "/Login&Signup/signup.html" &&
+    location.pathname !== "/Login&Signup/loginWithNum.html"
+      ? (location = "/Login&Signup/login.html")
+      : console.log("Can't access without login");
   }
 });
 
