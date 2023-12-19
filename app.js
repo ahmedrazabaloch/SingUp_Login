@@ -1,4 +1,9 @@
-import { onAuthStateChanged, auth, signOut } from "/firebase.js";
+import {
+  onAuthStateChanged,
+  auth,
+  signOut,
+  sendEmailVerification,
+} from "/firebase.js";
 
 let userName = document.getElementById("user_name");
 let userEmail = document.getElementById("user_email");
@@ -7,6 +12,9 @@ let logout = document.getElementById("logout_btn");
 //User Confirmation if they login
 onAuthStateChanged(auth, (user) => {
   if (user) {
+    // sendEmailVerification(auth.currentUser).then(() => {
+    //   console.log("Email verification sent!");
+    // });
     location.pathname !== "/profile.html"
       ? (location = "/profile.html")
       : console.log("Welcome");
