@@ -15,6 +15,7 @@ const notLoginPages = [
   "/Login&Signup/loginWithNum.html",
 ];
 const loginPages = ["/profile.html", "/index.html"];
+
 //User Confirmation if they login
 onAuthStateChanged(auth, (user) => {
   if (user) {
@@ -52,6 +53,7 @@ const userLogout = () => {
 
 logoutButton && logoutButton.addEventListener("click", userLogout);
 
+// Show & Hide mobile navbar
 const toggleDisplay = (element) => {
   element.style.display = element.style.display === "none" ? "block" : "none";
 };
