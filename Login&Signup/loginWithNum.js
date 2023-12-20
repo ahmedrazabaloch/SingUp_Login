@@ -14,6 +14,8 @@ window.recaptchaVerifier = new RecaptchaVerifier(
   "recaptcha-container",
   {}
 );
+let otpInput = document.getElementById("otp_input"); // otp input
+let otpDiv = document.querySelector(".field"); // otp input
 
 let confirmation; // otp register in this varibale
 // refister number
@@ -26,7 +28,7 @@ const numberRegister = (e) => {
     .then((confirmationResult) => {
       console.log("OTP sent");
       confirmation = confirmationResult;
-      otpInput.classList.remove("number_input");
+      otpDiv.classList.remove("otpDiv");
     })
     .catch((error) => {
       console.log(error);
@@ -36,7 +38,6 @@ const numLogin = document
   .getElementById("num_login")
   .addEventListener("click", numberRegister);
 //Verify OTP
-let otpInput = document.getElementById("otp_input"); // otp input
 const verifyOtp = (e) => {
   e.preventDefault();
   console.log(otpInput.value);

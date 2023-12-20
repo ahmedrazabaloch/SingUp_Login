@@ -169,8 +169,8 @@ div#recaptcha-container {
 div#recaptcha-container div {
   margin: 0 auto;
 }
-.number_input {
-  /* display: none; */
+.otpDiv {
+  display: none;
 }
 @media screen and (max-width: 400px) {
   .form {
