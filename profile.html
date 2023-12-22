@@ -4,14 +4,68 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Profile</title>
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <h1 id="user_name"></h1>
+    <!-- <h3 id="user_name"></h3>
     <span id="user_email"></span>
     <br />
-    <button id="logout_btn">Logout</button>
+    <button id="logout_btn">Logout</button> -->
+
+    <div class="pro_container">
+      <div class="pro_box">
+        <div>
+          <h3 class="icons"><i class="bx bx-user-pin"></i>My Profile</h3>
+          <div class="input_container">
+            <form>
+              <label for="display_first_name">First Name</label>
+              <input type="text" id="display_first_name" />
+
+              <label for="display_last_name">Last Name</label>
+              <input type="text" id="display_last_name" />
+
+              <label for="mobile_number">Mobile Number</label>
+              <input type="text" id="mobile_number" />
+
+              <label for="user_image" class="icons">
+                <i class="bx bx-image-add"></i>Upload a picture
+              </label>
+              <input type="file" id="user_image" accept="image/**" />
+
+              <input type="submit" value="Save" />
+            </form>
+          </div>
+        </div>
+        <div>
+          <h3 class="icons"><i class="bx bx-envelope"></i>Email</h3>
+          <div class="input_container">
+            <form>
+              <label for="verify_email">Email</label>
+              <input type="text" id="verify_email" />
+              <input type="submit" value="Verify email" />
+            </form>
+          </div>
+        </div>
+        <div>
+          <h3 class="icons"><i class='bx bx-lock-alt'></i>Passowrd</h3>
+          <div class="input_container">
+            <form>
+              <label for="current_pass">Current passowrd</label>
+              <input type="text" id="current_pass" />
+              <label for="new_pass">New password</label>
+              <input type="text" id="new_pass" />
+              <input type="submit" value="Save" />
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <script src="firebase.js" type="module"></script>
-    <script src="app.js" type="module"></script>
+    <script src="profile.js" type="module"></script>
   </body>
 </html>

@@ -2,7 +2,6 @@ import {
   onAuthStateChanged,
   auth,
   signOut,
-  sendEmailVerification,
 } from "/firebase.js";
 
 let userDisplayName = document.getElementById("user_name");
@@ -50,7 +49,7 @@ const userLogout = () => {
       console.log("error-->", error);
     });
 };
-
+//make this below button for logout
 logoutButton && logoutButton.addEventListener("click", userLogout);
 
 // Show & Hide mobile navbar

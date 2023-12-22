@@ -1,0 +1,70 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* user profile */
+
+.pro_container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: #fff; */
+}
+
+.pro_box {
+  padding: 50px;
+  width: 500px;
+  /* background-color: #fff; */
+}
+.pro_box > div > h3 {
+  padding: 20px 0;
+}
+.input_container > form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.input_container > form > label {
+  width: 100%;
+  font-size: 16px;
+  text-align: left;
+  margin-bottom: 10px;
+}
+.input_container > form > input {
+  color: #333333;
+  width: 100%;
+  border: 1px solid #dcdcdc;
+  outline: none;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: larger;
+  margin-bottom: 20px;
+}
+
+.input_container > form > input:focus {
+  border: 1px solid #000;
+}
+.input_container > form > input[type="submit"] {
+  background-color: transparent;
+  width: 40%;
+  cursor: pointer;
+}
+#user_image {
+  display: none;
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.icons > i {
+  font-size: 40px;
+}
