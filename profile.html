@@ -11,13 +11,10 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <!-- <h3 id="user_name"></h3>
-    <span id="user_email"></span>
-    <br />
-    <button id="logout_btn">Logout</button> -->
 
     <div class="pro_container">
       <div class="pro_box">
+        
         <div>
           <h3 class="icons"><i class="bx bx-user-pin"></i>My Profile</h3>
           <div class="input_container">
@@ -36,33 +33,47 @@
               </label>
               <input type="file" id="user_image" accept="image/**" />
 
-              <input type="submit" value="Save" />
+              <input type="submit" value="Save" id="profile_btn"/>
             </form>
           </div>
+     
         </div>
+        
         <div>
           <h3 class="icons"><i class="bx bx-envelope"></i>Email</h3>
+          
           <div class="input_container">
             <form>
+             
               <label for="verify_email">Email</label>
               <input type="text" id="verify_email" />
-              <input type="submit" value="Verify email" />
+              
+              <input type="submit" value="Verify email" id="email_btn" />
             </form>
           </div>
+       
         </div>
+       
         <div>
           <h3 class="icons"><i class='bx bx-lock-alt'></i>Passowrd</h3>
+          
           <div class="input_container">
             <form>
+          
               <label for="current_pass">Current passowrd</label>
               <input type="text" id="current_pass" />
+          
               <label for="new_pass">New password</label>
               <input type="text" id="new_pass" />
-              <input type="submit" value="Save" />
+          
+              <input type="submit" value="Save" id="pass_btn"/>
             </form>
           </div>
+        
         </div>
+      
       </div>
+    
     </div>
 
     <script src="firebase.js" type="module"></script>
