@@ -1,5 +1,15 @@
-const display_fname = document.getElementById("display_first_name");
-const display_Lname = document.getElementById("display_last_name");
+// import { doc, getDoc } from "./firebase.js";
+
+// getData = async () => {
+//   const docRef = doc(db, "cities", "SF");
+//   const docSnap = await getDoc(docRef);
+
+//   console.log("docSnap.data()", docSnap.data());
+// };
+
+// getData();
+
+const user_fullname = document.getElementById("display_first_name");
 const mobile_number = document.getElementById("mobile_number");
 const user_image = document.getElementById("user_image");
 const profile_btn = document.getElementById("profile_btn");

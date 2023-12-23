@@ -14,13 +14,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  /* background-color: #fff; */
+  background-color: #E8E8E8;
 }
 
 .pro_box {
   padding: 50px;
   width: 500px;
-  /* background-color: #fff; */
+  background-color: #fff;
 }
 .pro_box > div > h3 {
   padding: 20px 0;
