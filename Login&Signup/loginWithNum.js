@@ -15,7 +15,7 @@ window.recaptchaVerifier = new RecaptchaVerifier(
   {}
 );
 let otpInput = document.getElementById("otp_input"); // otp input
-let otpDiv = document.querySelector(".field"); // otp input
+let otpDiv = document.querySelector(".otpDiv"); // otp input
 
 let confirmation; // otp register in this varibale
 // refister number
